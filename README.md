@@ -9,7 +9,7 @@
 
 #### Cloning and navigating to correct directory:
 
-* Clone the repository into any folder of your choice using ```git clone <LINK TO THE REPO>``` on terminal. (this link to the repo can be found by clicking on the "Clone or download" button).
+* Clone the repository into any folder of your choice by running ```git clone <LINK TO THE REPO>``` on terminal. (this link to the repo can be found by clicking on the "Clone or download" button).
 * Next go into the project folder by running the command ```cd dev-workshop-public``` on terminal. Running the command ```git branch``` will give you the branch that you are currently on. By default, that would be the ```master``` branch.
 * To change to an appropriate branch, run the command ```git checkout week-2``` on terminal. In this case, the week-2 branch will have week 2's code.
 * Next go into server folder ```cd server``` on the terminal.
