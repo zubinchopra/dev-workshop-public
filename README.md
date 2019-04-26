@@ -2,8 +2,10 @@
 
 ### Instruction on how to get the project up and running
 
-#### Viewing the code on GitHub (recommended):
+### Viewing the code on GitHub (recommended):
 * I would highly recommend just viewing the code on GitHub instead of cloning it down in order to force yourself to write code. That contributes to better learning. To view the code online and identity the bugs in your own code, just select the appropraite branch from the ```Branch``` dropdown above. For example selecting the branch ```week-2``` will show you that week's code.
+
+### Pulling down the code to your own machine:
 
 #### Cloning and navigating to correct directory:
 
