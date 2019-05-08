@@ -8,7 +8,7 @@ const socket = require('socket.io');
 const PORT = 8080;
 
 // Assign the value of your mongoDB connection string to this constant
-const dbConnectString = "mongodb+srv://zchopra:workshop@devworkshop-hun0p.azure.mongodb.net/test?retryWrites=true";
+const dbConnectString = "";
 
 // Updating mongoose's promise version
 mongoose.Promise = global.Promise;
