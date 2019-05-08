@@ -4,10 +4,10 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const Message = require('./models/message');
 
-const PORT = 3000;
+const PORT = 8080;
 
 // Assign the value of your mongoDB connection string to this constant
-const dbConnectString = "";
+const dbConnectString = "mongodb+srv://zchopra:workshop@devworkshop-hun0p.azure.mongodb.net/test?retryWrites=true";
 
 // Updating mongoose's promise version
 mongoose.Promise = global.Promise;
@@ -17,6 +17,13 @@ mongoose.connect(dbConnectString).then(() => {
     console.log('connected to the db');
 }).catch((err) => {
     console.log(err);
+});
+
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Content-Type");
+    res.header("Access-Control-Allow-Methods", "GET, POST");
+    next();
 });
 
 // Middleware to parse the request body as json
