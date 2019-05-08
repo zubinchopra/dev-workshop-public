@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const Message = require('./models/message');
+const socket = require('socket.io');
 
 const PORT = 8080;
 
@@ -51,6 +52,16 @@ app.post('/api/message', (req, res) => {
 });
 
 // Start the server at the specified PORT
-app.listen(PORT, () => {
+let server = app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);
+});
+
+let io = socket(server);
+
+io.on("connection", (socket) => {
+
+    socket.on("new-message", (data) => {
+        io.sockets.emit("new-message", data);
+    });
+
 });
