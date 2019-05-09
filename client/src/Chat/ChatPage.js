@@ -12,7 +12,7 @@ class ChatPage extends Component {
         this.state = {
             messages: [],
             socket: openSocket("/")
-        }
+        };
 
         this.state.socket.on("new-message", (message) => {
             let currentMessages = this.state.messages;
