@@ -5,10 +5,10 @@ const mongoose = require('mongoose');
 const Message = require('./models/message');
 const socket = require('socket.io');
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 // Assign the value of your mongoDB connection string to this constant
-const dbConnectString = "";
+const dbConnectString = "mongodb+srv://zchopra:workshop@devworkshop-hun0p.azure.mongodb.net/test?retryWrites=true";
 
 // Updating mongoose's promise version
 mongoose.Promise = global.Promise;
@@ -56,6 +56,7 @@ let server = app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);
 });
 
+// Starting a socket on the specified server
 let io = socket(server);
 
 io.on("connection", (socket) => {
